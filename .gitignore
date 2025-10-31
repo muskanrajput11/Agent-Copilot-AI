@@ -1,0 +1,17 @@
+# Python Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+logs/
+
+# Data & AI Model (Yeh files bahut badi hain)
+twcs.csv
+training_data.csv
+support_agent_model/
+
+# Frontend Dependencies
+frontend/node_modules/
+frontend/dist/
+
+# IDE files
+.vscode/

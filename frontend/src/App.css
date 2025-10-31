@@ -1,0 +1,186 @@
+/* App.css - Eye-Catching Dark Mode */
+
+/* Main container ko full-page banayein */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  background-color: #121212; 
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Header */
+.header {
+  /* SUBTLE GRADIENT ADD KIYA GAYA HAI */
+  background: linear-gradient(to right, #1e1e1e, #1a1a1a);
+  border-bottom: 1px solid #333;
+  color: white;
+  padding: 24px 40px;
+  text-align: left;
+}
+.header h1 {
+  /* GLOW EFFECT ADD KIYA GAYA HAI */
+  color: #00aaff; 
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+}
+.header p {
+  color: #aaa;
+  font-size: 1.1em;
+}
+
+/* Main Content Area */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Input Area (Left Side) */
+.input-area {
+  flex-basis: 40%;
+  padding: 24px 40px;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  background-color: #222;
+  color: #e0e0e0;
+  min-height: 200px;
+  flex-grow: 1;
+  resize: none;
+  /* BORDER TRANSITION ADD KIYA GAYA HAI */
+  transition: all 0.3s ease;
+}
+textarea:focus {
+  outline: none;
+  border-color: #00aaff;
+  /* FOCUS PAR STRONG GLOW */
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+/* MAIN BUTTON PAR GLOW */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #00aaff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  /* BUTTON PAR GLOW */
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+}
+button:hover:not(:disabled) {
+  background-color: #0088cc;
+  /* HOVER PAR ZYADA GLOW */
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+  transform: translateY(-2px);
+}
+button:disabled {
+  background-color: #555;
+  color: #999;
+  cursor: not-allowed;
+  box-shadow: none; /* Disabled par koi glow nahi */
+}
+
+/* Suggestions Area (Right Side) */
+.suggestions-area {
+  flex-basis: 60%;
+  padding: 24px 40px;
+  overflow-y: auto;
+}
+.suggestions-list h3 {
+  margin-bottom: 16px;
+  color: #fafafa;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.suggestion-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.suggestion-card:hover {
+  transform: translateY(-3px); /* Thoda zyada pop */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  border-color: #00aaff;
+}
+
+.suggestion-card p {
+  flex-grow: 1;
+  margin-right: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.copy-btn {
+  width: auto;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fafafa;
+  box-shadow: none; /* Is par glow nahi chahiye */
+}
+.copy-btn:hover:not(:disabled) {
+  background-color: #444;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.copy-btn.copied {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333;
+  border-top: 4px solid #00aaff;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+/* Keyframes */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
