@@ -26,10 +26,7 @@ app = FastAPI(
 # --- Step 3: Enable CORS ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173", 
-        "https://agent-copilot-ai-sigma.vercel.app", 
-        "https://agent-copilot-ai.vercel.app"  
+    allow_origins=["*"
     ],
     allow_credentials=True,
     allow_methods=["*"], 
