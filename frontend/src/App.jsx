@@ -19,7 +19,7 @@ function App() {
     setCopiedIndex(null); 
     
     try {
-      const response = await axios.post('https://muskanrajput1104-agent-copilot.hf.space/generate-suggestions', {
+      const response = await axios.post('https://muskanrajput1104-agent-copilot-1.hf.space', {
         prompt: prompt
       });
       setSuggestions(response.data.suggestions);
