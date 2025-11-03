@@ -4,11 +4,11 @@ sdk: fastapi
 ---
 # Agent's Co-pilot 
 
-## 🔴 Live Demo
-Aap is project ko yahan live try kar sakte hain:
+## Live Demo
+You can try this project live here:
 **[https://agent-copilot-ai.vercel.app/](https://agent-copilot-ai.vercel.app/)**
 
-*(Backend Hugging Face ke free plan par hai, isliye pehli request mein "jaagne" (wake up) ke liye 30-60 second lag sakte hain.)*
+*(Note: The backend is hosted on Hugging Face's free plan, so the first request may take 30-60 seconds to "wake up".)*
 
 **A Full-Stack AI application that serves as a smart assistant for customer support teams, providing real-time, high-quality reply suggestions.**
 
